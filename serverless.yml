@@ -9,6 +9,7 @@ package:
   exclude:
     - package-lock.json
     - test/**
+    - client/**
 
 
 #funtions details
