@@ -1,0 +1,43 @@
+#service name
+service: todos-api
+#provider aws lamda funtions
+provider:
+  name: aws
+  runtime: nodejs8.10
+#exlude files
+package:
+  exclude:
+    - package-lock.json
+    - test/**
+
+
+#funtions details
+functions:
+  insertTodo:
+    handler: handler.insertTodo
+    events:
+     - http:
+         path: todo/api/v1.0/tasks
+         method: post
+         cors: true
+  getTodos:
+    handler: handler.getTodos
+    events:
+     - http:
+         path: todo/api/v1.0/tasks
+         method: get
+         cors: true
+  updateTodos:
+    handler: handler.updateTodos
+    events:
+     - http:
+         path: todo/api/v1.0/tasks/{id}
+         method: put
+         cors: true
+  deleteTodos:
+    handler: handler.deleteTodos
+    events:
+     - http:
+         path: todo/api/v1.0/tasks/{id}
+         method: delete
+         cors: true

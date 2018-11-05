@@ -1,0 +1,25 @@
+{
+  "name": "serverlessbackend",
+  "version": "1.0.0",
+  "description": "some",
+  "main": "handler.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha --reporter spec -w"
+  },
+  "keywords": [
+    "AWS",
+    "lambda"
+  ],
+  "author": "Naveed",
+  "license": "ISC",
+  "dependencies": {
+    "pg-promise": "^8.5.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-http": "^4.2.0",
+    "isomorphic-fetch": "^2.2.1",
+    "mocha": "^5.2.0"
+  }
+}
